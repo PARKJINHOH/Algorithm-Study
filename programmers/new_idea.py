@@ -32,10 +32,12 @@ def solution(new_id):
             answer = answer[:-1]
 
     # 7단계
-    if len(answer) < 2:
-        for _ in range(2):
-            answer += answer[-1]
-    elif len(answer) == 2:
+    # if len(answer) < 2:
+    #     for _ in range(2):
+    #         answer += answer[-1]
+    # elif len(answer) == 2:
+    #     answer += answer[-1]
+    while len(answer) < 3:
         answer += answer[-1]
 
     return answer
